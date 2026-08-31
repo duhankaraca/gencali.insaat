@@ -3,102 +3,512 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gecali İnşaat | Mühendislik ve Yapı Hizmetleri</title>
-    <script src="https://cdn.tailwindcss.com"></script>
+    <title>Gençali İnşaat — Karot Beton Delme & Kesme Hizmetleri</title>
+    <!-- FontAwesome İkonlar -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    
     <style>
-        /* İsşmak Karot Bej/Krem Arka Plan Rengi */
+        :root {
+            --accent-gold: #d4af37;
+            --gold-hover: #b89628;
+            --bg-main: #0b1329;
+            --bg-card: #1c2541;
+            --text-light: #ffffff;
+            --text-muted: #a0aec0;
+            --border-color: rgba(212, 175, 55, 0.2);
+            --whatsapp-green: #25D366;
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Plus Jakarta Sans', sans-serif;
+            scroll-behavior: smooth;
+        }
+
         body {
-            background-color: #f7f4ed;
-            color: #1a1a1a;
+            background-color: var(--bg-main);
+            color: var(--text-light);
+            line-height: 1.6;
+        }
+
+        /* --- NAVBAR --- */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgba(11, 19, 41, 0.95);
+            backdrop-filter: blur(12px);
+            border-bottom: 1px solid var(--border-color);
+            z-index: 1000;
+            padding: 18px 8%;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 24px;
+            font-weight: 800;
+            color: var(--text-light);
+            text-decoration: none;
+            letter-spacing: 1.5px;
+        }
+
+        .logo span {
+            color: var(--accent-gold);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+            gap: 30px;
+        }
+
+        nav a {
+            color: var(--text-light);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 0.5px;
+            transition: 0.3s;
+        }
+
+        nav a:hover {
+            color: var(--accent-gold);
+        }
+
+        .btn-gold {
+            background: linear-gradient(135deg, #d4af37 0%, #aa820a 100%);
+            color: #000;
+            padding: 12px 24px;
+            border-radius: 6px;
+            font-weight: 700;
+            text-decoration: none;
+            transition: transform 0.3s, box-shadow 0.3s;
+            box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .btn-gold:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(212, 175, 55, 0.5);
+        }
+
+        /* SABİT WHATSAPP BUTONU */
+        .wp-float {
+            position: fixed;
+            width: 60px;
+            height: 60px;
+            bottom: 30px;
+            right: 30px;
+            background-color: var(--whatsapp-green);
+            color: #FFF;
+            border-radius: 50px;
+            text-align: center;
+            font-size: 32px;
+            box-shadow: 2px 2px 10px rgba(0,0,0,0.4);
+            z-index: 9999;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-decoration: none;
+            transition: transform 0.3s;
+        }
+
+        .wp-float:hover {
+            transform: scale(1.1);
+        }
+
+        /* --- HERO --- */
+        .hero {
+            height: 100vh;
+            background: linear-gradient(180deg, rgba(11,19,41,0.78) 0%, rgba(11,19,41,0.95) 100%), url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1920') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            padding: 0 20px;
+            margin-top: 60px;
+        }
+
+        .hero-content {
+            max-width: 900px;
+        }
+
+        .hero-badge {
+            background: rgba(212, 175, 55, 0.15);
+            border: 1px solid var(--accent-gold);
+            color: var(--accent-gold);
+            padding: 6px 16px;
+            border-radius: 20px;
+            font-size: 13px;
+            font-weight: 700;
+            display: inline-block;
+            margin-bottom: 20px;
+            text-transform: uppercase;
+        }
+
+        .hero h1 {
+            font-size: 52px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
+        }
+
+        .hero h1 span {
+            color: var(--accent-gold);
+        }
+
+        .hero p {
+            font-size: 18px;
+            color: var(--text-muted);
+            margin-bottom: 35px;
+            font-weight: 300;
+        }
+
+        /* --- SEKSİYONLAR --- */
+        section {
+            padding: 90px 8%;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+        }
+
+        .section-title h2 {
+            font-size: 38px;
+            font-weight: 800;
+            margin-bottom: 12px;
+        }
+
+        .section-title p {
+            color: var(--accent-gold);
+            font-size: 15px;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* --- BÖLGELER --- */
+        .locations-bar {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .locations-grid {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .location-badge {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 10px 22px;
+            border-radius: 8px;
+            font-weight: 700;
+            color: var(--text-light);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .location-badge i {
+            color: var(--accent-gold);
+            margin-right: 8px;
+        }
+
+        /* --- HİZMET KARTLARI --- */
+        .services-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .service-card {
+            background-color: var(--bg-card);
+            padding: 35px 25px;
+            border-radius: 12px;
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            transition: all 0.3s;
+        }
+
+        .service-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent-gold);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        .service-card i {
+            font-size: 40px;
+            color: var(--accent-gold);
+            margin-bottom: 20px;
+        }
+
+        .service-card h3 {
+            font-size: 22px;
+            margin-bottom: 12px;
+        }
+
+        .service-card p {
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        /* --- GALERİ / UYGULAMALAR --- */
+        .gallery-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 20px;
+        }
+
+        .gallery-item {
+            position: relative;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 240px;
+            border: 1px solid var(--border-color);
+        }
+
+        .gallery-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.4s;
+        }
+
+        .gallery-item:hover img {
+            transform: scale(1.08);
+        }
+
+        .gallery-desc {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(11, 19, 41, 0.95));
+            padding: 15px;
+        }
+
+        /* --- İLETİŞİM --- */
+        .contact-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            background: var(--bg-card);
+            padding: 40px;
+            border-radius: 12px;
+            border: 1px solid var(--border-color);
+        }
+
+        .contact-info div {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+            margin-bottom: 25px;
+        }
+
+        .contact-info i {
+            background: rgba(212, 175, 55, 0.1);
+            color: var(--accent-gold);
+            width: 50px;
+            height: 50px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+            font-size: 20px;
+        }
+
+        footer {
+            background-color: #060a17;
+            text-align: center;
+            padding: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.05);
+            color: var(--text-muted);
+            font-size: 14px;
+        }
+
+        @media (max-width: 768px) {
+            nav ul { display: none; }
+            .contact-container { grid-template-columns: 1fr; }
+            .hero h1 { font-size: 34px; }
         }
     </style>
 </head>
-<body class="font-sans antialiased pb-24 md:pb-0">
+<body>
 
-    <header class="border-b border-gray-300 py-4 px-6 sticky top-0 bg-[#f7f4ed]/90 backdrop-blur-md z-40">
-        <div class="max-w-6xl mx-auto flex justify-between items-center">
-            <div>
-                <h1 class="text-2xl font-black tracking-tight text-slate-900">GECALİ <span class="text-amber-600">İNŞAAT</span></h1>
-                <p class="text-xs text-gray-500 font-medium">"Sağlam Temeller, Kaliteli Gelecek"</p>
-            </div>
-            <a href="tel:05XXXXXXXXX" class="hidden md:flex items-center gap-2 bg-amber-600 hover:bg-amber-700 text-white font-bold px-5 py-2.5 rounded-lg transition">
-                <i class="fas fa-phone"></i> 05XX XXX XX XX
-            </a>
-        </div>
+    <!-- SABİT WHATSAPP BUTONU -->
+    <a href="https://wa.me/905464235361?text=Merhaba,%20karot%20ve%20beton%20kesme%20işim%20için%20fiyat%20teklifi%20almak%20istiyorum." class="wp-float" target="_blank" title="WhatsApp ile Mesaj Gönder">
+        <i class="fa-brands fa-whatsapp"></i>
+    </a>
+
+    <!-- ÜST MENÜ -->
+    <header>
+        <a href="#" class="logo">GENÇALİ <span>İNŞAAT</span></a>
+        <nav>
+            <ul>
+                <li><a href="#anasayfa">Ana Sayfa</a></li>
+                <li><a href="#bolgeler">Bölgelerimiz</a></li>
+                <li><a href="#hakkimizda">Hakkımızda</a></li>
+                <li><a href="#hizmetler">Hizmetlerimiz</a></li>
+                <li><a href="#galeri">Uygulamalar</a></li>
+                <li><a href="#iletisim">İletişim</a></li>
+            </ul>
+        </nav>
+        <a href="https://wa.me/905464235361?text=Merhaba,%20bilgi%20almak%20istiyorum." target="_blank" class="btn-gold">
+            <i class="fa-brands fa-whatsapp"></i> WhatsApp Tıkla
+        </a>
     </header>
 
-    <section class="max-w-4xl mx-auto px-6 pt-16 pb-12">
-        <div class="inline-block bg-amber-100 text-amber-800 text-xs font-bold px-3 py-1 rounded-full uppercase tracking-wider mb-4">
-            Mühendislik & Şantiye Çözümleri
-        </div>
-        <h2 class="text-4xl md:text-6xl font-black leading-tight tracking-tight mb-6 text-slate-900">
-            Güvenli Yapılar, <br>
-            <span class="text-amber-600 underline decoration-amber-400">Kaliteli Gelecek.</span>
-        </h2>
-        
-        <blockquote class="text-xl md:text-2xl font-bold italic border-l-4 border-amber-600 pl-4 py-1 mb-6 text-gray-700">
-            “Yapmak kolay; sağlam, estetik ve zamanında teslim etmek zanaat.”
-        </blockquote>
-
-        <p class="text-lg text-gray-700 leading-relaxed mb-8 max-w-2xl">
-            Anahtar teslim projeler, kaba ve ince inşaat işleri, yapısal güçlendirme ve profesyonel tadilat hizmetleri. Şantiyelerimizde sıfır taviz, yüksek kalite.
-        </p>
-
-        <div class="hidden md:flex gap-4">
-            <a href="tel:05XXXXXXXXX" class="bg-amber-600 hover:bg-amber-700 text-white font-bold text-lg px-8 py-4 rounded-xl shadow-lg transition text-center">
-                <i class="fas fa-phone mr-2"></i> Hemen Ara — 05XX XXX XX XX
-            </a>
-            <a href="https://wa.me/905XXXXXXXXX" class="bg-stone-900 hover:bg-black text-white font-bold text-lg px-8 py-4 rounded-xl shadow-lg transition text-center">
-                <i class="fab fa-whatsapp mr-2 text-emerald-400"></i> Ücretsiz Keşif İste
+    <!-- GİRİŞ -->
+    <section id="anasayfa" class="hero">
+        <div class="hero-content">
+            <span class="hero-badge">Profesyonel Karot & Beton Kesme</span>
+            <h1>Darbesiz Karot Delik Açma & <span>Zemin Betonu Hizmetleri</span></h1>
+            <p>Gençali İnşaat; Bilecik, Eskişehir, Bursa ve Sakarya illerinde en son teknoloji sulu karot makineleri ile bina yapısına zarar vermeden pürüzsüz delme ve kesme çözümleri sunar.</p>
+            <a href="https://wa.me/905464235361?text=Merhaba,%20ücretsiz%20keşif%20ve%20teklif%20istiyorum." target="_blank" class="btn-gold" style="padding: 15px 35px; font-size: 16px;">
+                <i class="fa-brands fa-whatsapp"></i> Ücretsiz Keşif & Fiyat Al
             </a>
         </div>
     </section>
 
-    <section class="max-w-6xl mx-auto px-6 py-12 border-t border-gray-300">
-        <h3 class="text-2xl font-black uppercase tracking-wider mb-8 text-amber-600">01 — Hizmetlerimiz</h3>
-        
-        <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-            <div class="bg-white/60 p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition">
-                <div class="text-amber-600 text-2xl font-black mb-2">01.</div>
-                <h4 class="text-xl font-bold mb-3 text-slate-900">Anahtar Teslim İnşaat</h4>
-                <p class="text-gray-600 text-sm leading-relaxed">Projelendirmeden ruhsata, kaba inşaattan anahtar teslimine kadar tüm konut ve iş yeri yapım süreçleri.</p>
-            </div>
-            <div class="bg-white/60 p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition">
-                <div class="text-amber-600 text-2xl font-black mb-2">02.</div>
-                <h4 class="text-xl font-bold mb-3 text-slate-900">Kaba ve İnce İşçilik</h4>
-                <p class="text-gray-600 text-sm leading-relaxed">Betonarme, kalıp, demir, duvar örme, sıva, şap ve ince mimari detaylarda eksiksiz şantiye yönetimi.</p>
-            </div>
-            <div class="bg-white/60 p-6 rounded-2xl border border-gray-200 shadow-sm hover:shadow-md transition">
-                <div class="text-amber-600 text-2xl font-black mb-2">03.</div>
-                <h4 class="text-xl font-bold mb-3 text-slate-900">Tadilat & Renovasyon</h4>
-                <p class="text-gray-600 text-sm leading-relaxed">Mevcut yapıların modernizasyonu, alan genişletme, statik güçlendirme ve mimari yenileme.</p>
+    <!-- HİZMET BÖLGELERİ -->
+    <section id="bolgeler" style="padding-top: 40px; padding-bottom: 40px;">
+        <div class="locations-bar">
+            <h3 style="font-size: 20px; margin-bottom: 8px; color: var(--accent-gold);">Hizmet Verdiğimiz Bölgeler</h3>
+            <div class="locations-grid">
+                <div class="location-badge"><i class="fa-solid fa-location-dot"></i> Bilecik</div>
+                <div class="location-badge"><i class="fa-solid fa-location-dot"></i> Eskişehir</div>
+                <div class="location-badge"><i class="fa-solid fa-location-dot"></i> Bursa</div>
+                <div class="location-badge"><i class="fa-solid fa-location-dot"></i> Sakarya</div>
             </div>
         </div>
     </section>
 
-    <footer class="bg-stone-900 text-white mt-12 py-12 px-6">
-        <div class="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-8">
+    <!-- HAKKIMIZDA / TEKNİK BİLGİ -->
+    <section id="hakkimizda">
+        <div class="section-title">
+            <p>Teknolojik Altyapı & Hassas İşçilik</p>
+            <h2>Karot Delme Teknolojimiz</h2>
+        </div>
+        <div style="max-width: 900px; margin: 0 auto; text-align: center; color: var(--text-muted); font-size: 16px; line-height: 1.8;">
+            <p style="margin-bottom: 15px;">Karot ile beton delme; betonarme yapılara, taşıyıcı kolonlara veya kirişlere zarar vermeden istenilen milimetrik çapta silindir şeklinde beton çıkarma işlemidir. İşlemlerimiz sıfır titreşimli sulu karot makineleri ile gerçekleştirildiğinden, yapıda çatlak veya kılcal hasar oluşmaz.</p>
+            <p>Doğalgaz tesisatı, klima giderleri, havalandırma şaftları ve pürüzsüz zemin beton dökümleri için bölgedeki en pratik, temiz ve ekonomik çözümleri sunuyoruz.</p>
+        </div>
+    </section>
+
+    <!-- HİZMETLERİMİZ -->
+    <section id="hizmetler" style="background-color: #070d1d;">
+        <div class="section-title">
+            <p>Neler Yapıyoruz?</p>
+            <h2>Hizmet Detaylarımız</h2>
+        </div>
+        <div class="services-grid">
+            <div class="service-card">
+                <i class="fa-solid fa-circle-notch"></i>
+                <h3>Karot Beton Delik Açma</h3>
+                <p>Ø10 mm'den Ø500 mm çapa kadar her türlü donatılı/donatısız betonda doğalgaz, su, klima ve havalandırma delikleri açma.</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-scissors"></i>
+                <h3>Hidrolik Beton Kesme</h3>
+                <p>Kapı, pencere, asansör boşlukları ve merdiven yeri açma işlemlerini tozsuz, sessiz ve taşıyıcı sisteme zarar vermeden yapıyoruz.</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-layer-group"></i>
+                <h3>Saha & Zemin Betonu</h3>
+                <p>Otopark, fabrika ve bina zeminlerine helikopterli, derz kesimli ve yüzey sertleştiricili zemin betonu uygulaması.</p>
+            </div>
+            <div class="service-card">
+                <i class="fa-solid fa-hammer"></i>
+                <h3>Beton Kırım & Derz Kesimi</h3>
+                <p>Kontrollü beton kırma, moloz tahliyesi ve asfalt/zemin derz genişletme ve hat kesim işçilikleri.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- GALERİ / GÖRSELLER -->
+    <section id="galeri">
+        <div class="section-title">
+            <p>Saha Görsellerimiz</p>
+            <h2>Karot ve Zemin Uygulamaları</h2>
+        </div>
+        <div class="gallery-grid">
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800" alt="Karot Delik Açma">
+                <div class="gallery-desc">
+                    <h4 style="color: var(--accent-gold);">Karot Delik Açma</h4>
+                    <p style="font-size: 12px;">Hassas ve Pürüzsüz Beton Delme</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?q=80&w=800" alt="Beton Kesme">
+                <div class="gallery-desc">
+                    <h4 style="color: var(--accent-gold);">Beton Kesme & Kırım</h4>
+                    <p style="font-size: 12px;">Hidrolik Testereli Kesim</p>
+                </div>
+            </div>
+            <div class="gallery-item">
+                <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800" alt="Zemin Betonu">
+                <div class="gallery-desc">
+                    <h4 style="color: var(--accent-gold);">Zemin Betonu Dökümü</h4>
+                    <p style="font-size: 12px;">Perdahlı & Dayanıklı Saha Betonu</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- İLETİŞİM -->
+    <section id="iletisim" style="background-color: #070d1d;">
+        <div class="section-title">
+            <p>7/24 Bize Ulaşın</p>
+            <h2>İletişim & Teklif</h2>
+        </div>
+        <div class="contact-container">
+            <div class="contact-info">
+                <div>
+                    <i class="fa-solid fa-phone"></i>
+                    <div>
+                        <h4>Telefon (Hemen Ara)</h4>
+                        <p style="color: var(--text-muted);"><a href="tel:05464235361" style="color: var(--accent-gold); text-decoration: none; font-weight: 700;">0546 423 53 61</a></p>
+                    </div>
+                </div>
+                <div>
+                    <i class="fa-brands fa-whatsapp"></i>
+                    <div>
+                        <h4>WhatsApp Hattı</h4>
+                        <p style="color: var(--text-muted);"><a href="https://wa.me/905464235361" style="color: var(--whatsapp-green); text-decoration: none; font-weight: 700;">0546 423 53 61 (Tıkla Mesaj Gönder)</a></p>
+                    </div>
+                </div>
+                <div>
+                    <i class="fa-solid fa-map-location-dot"></i>
+                    <div>
+                        <h4>Hizmet İllerimiz</h4>
+                        <p style="color: var(--text-muted);">Bilecik | Eskişehir | Bursa | Sakarya</p>
+                    </div>
+                </div>
+            </div>
             <div>
-                <h4 class="text-2xl font-black text-amber-500 mb-4">GECALİ İNŞAAT</h4>
-                <p class="text-gray-400 text-sm mb-4">Projeniz için ücretsiz keşif ve yazılı teklif almak için dilediğiniz zaman bize ulaşabilirsiniz.</p>
-            </div>
-            <div class="space-y-3 text-sm text-gray-300">
-                <p><i class="fas fa-phone text-amber-500 mr-2"></i> <strong>Telefon:</strong> 05XX XXX XX XX</p>
-                <p><i class="fas fa-envelope text-amber-500 mr-2"></i> <strong>E-posta:</strong> info@gecaliinsaat.com</p>
-                <p><i class="fas fa-clock text-amber-500 mr-2"></i> <strong>Mesai:</strong> 08:00 - 19:00 (Pazartesi - Cumartesi)</p>
+                <iframe src="https://maps.google.com/maps?q=Bilecik&t=&z=8&ie=UTF8&iwloc=&output=embed" width="100%" height="220" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
-    </footer>
+    </section>
 
-    <div class="fixed bottom-0 left-0 right-0 bg-stone-900 p-2 flex gap-2 md:hidden z-50 shadow-2xl border-t border-stone-800">
-        <a href="tel:05XXXXXXXXX" class="flex-1 bg-amber-600 text-white font-bold py-3 px-2 rounded-lg text-center text-sm flex items-center justify-center gap-2">
-            <i class="fas fa-phone"></i> Hemen Ara
-        </a>
-        <a href="https://wa.me/905XXXXXXXXX" class="flex-1 bg-emerald-600 text-white font-bold py-3 px-2 rounded-lg text-center text-sm flex items-center justify-center gap-2">
-            <i class="fab fa-whatsapp"></i> Keşif İste
-        </a>
-    </div>
+    <footer>
+        <p>© 2026 Gençali İnşaat — Tüm Hakları Saklıdır.</p>
+    </footer>
 
 </body>
 </html>
