@@ -130,7 +130,7 @@
         /* --- HERO --- */
         .hero {
             height: 100vh;
-            background: linear-gradient(180deg, rgba(11,19,41,0.80) 0%, rgba(11,19,41,0.92) 100%), url('hero-bg.jpg') center/cover no-repeat;
+            background: linear-gradient(180deg, rgba(11,19,41,0.80) 0%, rgba(11,19,41,0.92) 100%), url('hero-bg.jpg.jpeg') center/cover no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -196,62 +196,6 @@
             font-weight: 600;
             text-transform: uppercase;
             letter-spacing: 1px;
-        }
-
-        /* --- REFERANSLAR --- */
-        .references-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-            gap: 25px;
-        }
-
-        .reference-card {
-            background-color: var(--bg-card);
-            border-radius: 12px;
-            overflow: hidden;
-            border: 1px solid rgba(255, 255, 255, 0.08);
-            transition: all 0.3s ease;
-        }
-
-        .reference-card:hover {
-            transform: translateY(-6px);
-            border-color: var(--accent-gold);
-            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
-        }
-
-        .reference-img {
-            width: 100%;
-            height: 200px;
-            object-fit: cover;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .reference-info {
-            padding: 20px;
-        }
-
-        .reference-info h3 {
-            font-size: 18px;
-            color: var(--text-light);
-            margin-bottom: 8px;
-        }
-
-        .reference-info p {
-            color: var(--text-muted);
-            font-size: 13px;
-            line-height: 1.5;
-        }
-
-        .reference-tag {
-            display: inline-block;
-            margin-top: 12px;
-            padding: 4px 10px;
-            background: rgba(212, 175, 55, 0.15);
-            color: var(--accent-gold);
-            font-size: 11px;
-            font-weight: 700;
-            border-radius: 4px;
-            text-transform: uppercase;
         }
 
         /* --- HİZMET KARTLARI --- */
@@ -325,6 +269,62 @@
             right: 0;
             background: linear-gradient(transparent, rgba(11, 19, 41, 0.95));
             padding: 15px;
+        }
+
+        /* --- REFERANSLAR --- */
+        .references-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .reference-card {
+            background-color: var(--bg-card);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .reference-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--accent-gold);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+
+        .reference-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .reference-info {
+            padding: 20px;
+        }
+
+        .reference-info h3 {
+            font-size: 18px;
+            color: var(--text-light);
+            margin-bottom: 8px;
+        }
+
+        .reference-info p {
+            color: var(--text-muted);
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .reference-tag {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 4px 10px;
+            background: rgba(212, 175, 55, 0.15);
+            color: var(--accent-gold);
+            font-size: 11px;
+            font-weight: 700;
+            border-radius: 4px;
+            text-transform: uppercase;
         }
 
         /* --- BÖLGELER --- */
@@ -418,8 +418,8 @@
             <ul>
                 <li><a href="#anasayfa">Ana Sayfa</a></li>
                 <li><a href="#hakkimizda">Hakkımızda</a></li>
-                <li><a href="#referanslar">Referanslar</a></li>
                 <li><a href="#hizmetler">Hizmetlerimiz</a></li>
+                <li><a href="#referanslar">Referanslar</a></li>
                 <li><a href="#bolgeler">Bölgelerimiz</a></li>
                 <li><a href="#iletisim">İletişim</a></li>
             </ul>
@@ -452,49 +452,7 @@
         </div>
     </section>
 
-    <!-- REFERANSLARIMIZ / PROJELER -->
-    <section id="referanslar" style="background-color: #081124; border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05);">
-        <div class="section-title">
-            <p>Tamamladığımız İşler & Projeler</p>
-            <h2>Referanslarımız</h2>
-        </div>
-        <div class="references-grid">
-            <div class="reference-card">
-                <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?q=80&w=800" alt="Fabrika Saha Betonu" class="reference-img">
-                <div class="reference-info">
-                    <h3>Fabrika Saha Betonu ve Perdah</h3>
-                    <p>Endüstriyel tesisler için yüksek dayanımlı, helikopter perdahlı ve derz kesimli zemin uygulaması.</p>
-                    <span class="reference-tag">Saha Betonu</span>
-                </div>
-            </div>
-            <div class="reference-card">
-                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800" alt="Karot Delme Projesi" class="reference-img">
-                <div class="reference-info">
-                    <h3>Endüstriyel Tesis Karot Uygulaması</h3>
-                    <p>Tesis havalandırma ve altyapı geçişleri için hassas çaplarda donatılı beton delme işlemleri.</p>
-                    <span class="reference-tag">Karot Delme</span>
-                </div>
-            </div>
-            <div class="reference-card">
-                <img src="hero-bg.jpg" alt="Raylı Kesim Projesi" class="reference-img">
-                <div class="reference-info">
-                    <h3>Raylı Testere ile Beton Kesim</h3>
-                    <p>Taşıyıcı kolon ve perdelerde yapının bütünlüğünü bozmadan hidrolik sistemler ile sessiz ve hassas kesim.</p>
-                    <span class="reference-tag">Beton Kesme</span>
-                </div>
-            </div>
-            <div class="reference-card">
-                <img src="https://images.unsplash.com/photo-1572981779307-38b8cabb2407?q=80&w=800" alt="Otopark Zemin Betonu" class="reference-img">
-                <div class="reference-info">
-                    <h3>Kapalı Otopark Zemin Kaplama</h3>
-                    <p>Yüzey sertleştiricili, aşınmaya dayanıklı ve derz açımlı kapalı otopark beton uygulaması.</p>
-                    <span class="reference-tag">Zemin Betonu</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- HİZMETLERİMİZ & SAHA UYGULAMALARI (BİRLEŞTİRİLMİŞ TEK BÖLÜM) -->
+    <!-- HİZMETLERİMİZ & SAHA UYGULAMALARI -->
     <section id="hizmetler" style="background-color: #070d1d;">
         <div class="section-title">
             <p>Neler Yapıyoruz & Saha Görsellerimiz</p>
@@ -535,7 +493,7 @@
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="hero-bg.jpg" alt="Beton Kesme">
+                <img src="hero-bg.jpg.jpeg" alt="Beton Kesme">
                 <div class="gallery-desc">
                     <h4 style="color: var(--accent-gold);">Raylı Beton Kesme</h4>
                     <p style="font-size: 12px;">Endüstriyel Tesis Derin Kesim Hizmeti</p>
@@ -546,6 +504,48 @@
                 <div class="gallery-desc">
                     <h4 style="color: var(--accent-gold);">Zemin Betonu Dökümü</h4>
                     <p style="font-size: 12px;">Perdahlı & Dayanıklı Saha Betonu</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- REFERANSLARIMIZ / PROJELER -->
+    <section id="referanslar" style="background-color: #081124; border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05);">
+        <div class="section-title">
+            <p>Tamamladığımız İşler & Projeler</p>
+            <h2>Referanslarımız</h2>
+        </div>
+        <div class="references-grid">
+            <div class="reference-card">
+                <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?q=80&w=800" alt="Fabrika Saha Betonu" class="reference-img">
+                <div class="reference-info">
+                    <h3>Fabrika Saha Betonu ve Perdah</h3>
+                    <p>Endüstriyel tesisler için yüksek dayanımlı, helikopter perdahlı ve derz kesimli zemin uygulaması.</p>
+                    <span class="reference-tag">Saha Betonu</span>
+                </div>
+            </div>
+            <div class="reference-card">
+                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800" alt="Karot Delme Projesi" class="reference-img">
+                <div class="reference-info">
+                    <h3>Endüstriyel Tesis Karot Uygulaması</h3>
+                    <p>Tesis havalandırma ve altyapı geçişleri için hassas çaplarda donatılı beton delme işlemleri.</p>
+                    <span class="reference-tag">Karot Delme</span>
+                </div>
+            </div>
+            <div class="reference-card">
+                <img src="hero-bg.jpg.jpeg" alt="Raylı Kesim Projesi" class="reference-img">
+                <div class="reference-info">
+                    <h3>Raylı Testere ile Beton Kesim</h3>
+                    <p>Taşıyıcı kolon ve perdelerde yapının bütünlüğünü bozmadan hidrolik sistemler ile sessiz ve hassas kesim.</p>
+                    <span class="reference-tag">Beton Kesme</span>
+                </div>
+            </div>
+            <div class="reference-card">
+                <img src="https://images.unsplash.com/photo-1572981779307-38b8cabb2407?q=80&w=800" alt="Otopark Zemin Betonu" class="reference-img">
+                <div class="reference-info">
+                    <h3>Kapalı Otopark Zemin Kaplama</h3>
+                    <p>Yüzey sertleştiricili, aşınmaya dayanıklı ve derz açımlı kapalı otopark beton uygulaması.</p>
+                    <span class="reference-tag">Zemin Betonu</span>
                 </div>
             </div>
         </div>
