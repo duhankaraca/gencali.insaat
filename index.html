@@ -66,7 +66,7 @@
         nav ul {
             display: flex;
             list-style: none;
-            gap: 30px;
+            gap: 25px;
         }
 
         nav a {
@@ -127,10 +127,11 @@
             transform: scale(1.1);
         }
 
-        /* --- HERO --- */
+        /* --- HERO (YENİ ARKA PLAN GÖRSELİ) --- */
         .hero {
             height: 100vh;
-            background: linear-gradient(180deg, rgba(11,19,41,0.78) 0%, rgba(11,19,41,0.95) 100%), url('https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=1920') center/cover no-repeat;
+            /* Arka plandaki yeni fabrika ve raylı kesim görseli için karanlık katman */
+            background: linear-gradient(180deg, rgba(11,19,41,0.80) 0%, rgba(11,19,41,0.92) 100%), url('hero-bg.jpg') center/cover no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -227,6 +228,62 @@
         .location-badge i {
             color: var(--accent-gold);
             margin-right: 8px;
+        }
+
+        /* --- REFERANSLAR --- */
+        .references-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .reference-card {
+            background-color: var(--bg-card);
+            border-radius: 12px;
+            overflow: hidden;
+            border: 1px solid rgba(255, 255, 255, 0.08);
+            transition: all 0.3s ease;
+        }
+
+        .reference-card:hover {
+            transform: translateY(-6px);
+            border-color: var(--accent-gold);
+            box-shadow: 0 10px 25px rgba(0,0,0,0.5);
+        }
+
+        .reference-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+        }
+
+        .reference-info {
+            padding: 20px;
+        }
+
+        .reference-info h3 {
+            font-size: 18px;
+            color: var(--text-light);
+            margin-bottom: 8px;
+        }
+
+        .reference-info p {
+            color: var(--text-muted);
+            font-size: 13px;
+            line-height: 1.5;
+        }
+
+        .reference-tag {
+            display: inline-block;
+            margin-top: 12px;
+            padding: 4px 10px;
+            background: rgba(212, 175, 55, 0.15);
+            color: var(--accent-gold);
+            font-size: 11px;
+            font-weight: 700;
+            border-radius: 4px;
+            text-transform: uppercase;
         }
 
         /* --- HİZMET KARTLARI --- */
@@ -362,6 +419,7 @@
                 <li><a href="#anasayfa">Ana Sayfa</a></li>
                 <li><a href="#bolgeler">Bölgelerimiz</a></li>
                 <li><a href="#hakkimizda">Hakkımızda</a></li>
+                <li><a href="#referanslar">Referanslar</a></li>
                 <li><a href="#hizmetler">Hizmetlerimiz</a></li>
                 <li><a href="#galeri">Uygulamalar</a></li>
                 <li><a href="#iletisim">İletişim</a></li>
@@ -372,7 +430,7 @@
         </a>
     </header>
 
-    <!-- GİRİŞ -->
+    <!-- GİRİŞ (HERO) -->
     <section id="anasayfa" class="hero">
         <div class="hero-content">
             <span class="hero-badge">Profesyonel Karot & Beton Kesme</span>
@@ -397,7 +455,7 @@
         </div>
     </section>
 
-    <!-- HAKKIMIZDA / TEKNİK BİLGİ -->
+    <!-- HAKKIMIZDA -->
     <section id="hakkimizda">
         <div class="section-title">
             <p>Yılların Tecrübesi & Güvenilir Hizmet</p>
@@ -405,6 +463,48 @@
         </div>
         <div style="max-width: 900px; margin: 0 auto; text-align: center; color: var(--text-muted); font-size: 16px; line-height: 1.8;">
             <p>2011'den itibaren piyasada hizmet vermenin senelere yayılmış tecrübe ve birikimini Gençali İnşaat firmamızdaki işinin ehli personellerimiz ile siz değerli müşterilerimize sunmaktan, zorlu projelerde bilgi ve tecrübemizi sizlere aktarıp çözüm ortağınız olmaktan bugüne kadar hep gurur duyduk.</p>
+        </div>
+    </section>
+
+    <!-- REFERANSLARIMIZ / PROJELER -->
+    <section id="referanslar" style="background-color: #081124; border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05);">
+        <div class="section-title">
+            <p>Tamamladığımız İşler & Projeler</p>
+            <h2>Referanslarımız</h2>
+        </div>
+        <div class="references-grid">
+            <div class="reference-card">
+                <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?q=80&w=800" alt="Fabrika Saha Betonu" class="reference-img">
+                <div class="reference-info">
+                    <h3>Fabrika Saha Betonu ve Perdah</h3>
+                    <p>Endüstriyel tesisler için yüksek dayanımlı, helikopter perdahlı ve derz kesimli zemin uygulaması.</p>
+                    <span class="reference-tag">Saha Betonu</span>
+                </div>
+            </div>
+            <div class="reference-card">
+                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800" alt="Karot Delme Projesi" class="reference-img">
+                <div class="reference-info">
+                    <h3>Endüstriyel Tesis Karot Uygulaması</h3>
+                    <p>Tesis havalandırma ve altyapı geçişleri için hassas çaplarda donatılı beton delme işlemleri.</p>
+                    <span class="reference-tag">Karot Delme</span>
+                </div>
+            </div>
+            <div class="reference-card">
+                <img src="hero-bg.jpg" alt="Raylı Kesim Projesi" class="reference-img">
+                <div class="reference-info">
+                    <h3>Raylı Testere ile Beton Kesim</h3>
+                    <p>Taşıyıcı kolon ve perdelerde yapının bütünlüğünü bozmadan hidrolik sistemler ile sessiz ve hassas kesim.</p>
+                    <span class="reference-tag">Beton Kesme</span>
+                </div>
+            </div>
+            <div class="reference-card">
+                <img src="https://images.unsplash.com/photo-1572981779307-38b8cabb2407?q=80&w=800" alt="Otopark Zemin Betonu" class="reference-img">
+                <div class="reference-info">
+                    <h3>Kapalı Otopark Zemin Kaplama</h3>
+                    <p>Yüzey sertleştiricili, aşınmaya dayanıklı ve derz açımlı kapalı otopark beton uygulaması.</p>
+                    <span class="reference-tag">Zemin Betonu</span>
+                </div>
+            </div>
         </div>
     </section>
 
@@ -438,7 +538,7 @@
         </div>
     </section>
 
-    <!-- GALERİ / GÖRSELLER -->
+    <!-- GALERİ / UYGULAMALAR -->
     <section id="galeri">
         <div class="section-title">
             <p>Saha Görsellerimiz</p>
@@ -453,10 +553,10 @@
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1572981779307-38b8cabb2407?q=80&w=800" alt="Beton Kesme">
+                <img src="hero-bg.jpg" alt="Beton Kesme">
                 <div class="gallery-desc">
-                    <h4 style="color: var(--accent-gold);">Beton Kesme & Kırım</h4>
-                    <p style="font-size: 12px;">Hidrolik Testereli Kesim</p>
+                    <h4 style="color: var(--accent-gold);">Raylı Beton Kesme</h4>
+                    <p style="font-size: 12px;">Endüstriyel Tesis Derin Kesim Hizmeti</p>
                 </div>
             </div>
             <div class="gallery-item">
@@ -500,7 +600,7 @@
                 </div>
             </div>
             <div>
-                <iframe src="https://maps.google.com/maps?q=Bilecik&t=&z=8&ie=UTF8&iwloc=&output=embed" width="100%" height="220" style="border:0; border-radius: 8px;" allowfullscreen="" loading="lazy"></iframe>
+                <iframe src="https://maps.google.com/maps?q=Bilecik&t=&z=8&ie=UTF8&iwloc=&output=embed" width="100%" height="220" style="border:0; border-radius: 8px;" title="Gençali İnşaat Hizmet Haritası" allowfullscreen="" loading="lazy"></iframe>
             </div>
         </div>
     </section>
