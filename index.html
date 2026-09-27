@@ -127,10 +127,9 @@
             transform: scale(1.1);
         }
 
-        /* --- HERO (YENİ ARKA PLAN GÖRSELİ) --- */
+        /* --- HERO --- */
         .hero {
             height: 100vh;
-            /* Arka plandaki yeni fabrika ve raylı kesim görseli için karanlık katman */
             background: linear-gradient(180deg, rgba(11,19,41,0.80) 0%, rgba(11,19,41,0.92) 100%), url('hero-bg.jpg') center/cover no-repeat;
             display: flex;
             align-items: center;
@@ -199,37 +198,6 @@
             letter-spacing: 1px;
         }
 
-        /* --- BÖLGELER --- */
-        .locations-bar {
-            background-color: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 30px;
-            text-align: center;
-        }
-
-        .locations-grid {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-top: 15px;
-        }
-
-        .location-badge {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 10px 22px;
-            border-radius: 8px;
-            font-weight: 700;
-            color: var(--text-light);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
-
-        .location-badge i {
-            color: var(--accent-gold);
-            margin-right: 8px;
-        }
-
         /* --- REFERANSLAR --- */
         .references-grid {
             display: grid;
@@ -291,6 +259,7 @@
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
+            margin-bottom: 50px;
         }
 
         .service-card {
@@ -323,7 +292,7 @@
             font-size: 14px;
         }
 
-        /* --- GALERİ / UYGULAMALAR --- */
+        /* --- GALERİ / SAHA UYGULAMALARI --- */
         .gallery-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
@@ -356,6 +325,37 @@
             right: 0;
             background: linear-gradient(transparent, rgba(11, 19, 41, 0.95));
             padding: 15px;
+        }
+
+        /* --- BÖLGELER --- */
+        .locations-bar {
+            background-color: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 12px;
+            padding: 30px;
+            text-align: center;
+        }
+
+        .locations-grid {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            flex-wrap: wrap;
+            margin-top: 15px;
+        }
+
+        .location-badge {
+            background: rgba(255, 255, 255, 0.05);
+            padding: 10px 22px;
+            border-radius: 8px;
+            font-weight: 700;
+            color: var(--text-light);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+        }
+
+        .location-badge i {
+            color: var(--accent-gold);
+            margin-right: 8px;
         }
 
         /* --- İLETİŞİM --- */
@@ -417,11 +417,10 @@
         <nav>
             <ul>
                 <li><a href="#anasayfa">Ana Sayfa</a></li>
-                <li><a href="#bolgeler">Bölgelerimiz</a></li>
                 <li><a href="#hakkimizda">Hakkımızda</a></li>
                 <li><a href="#referanslar">Referanslar</a></li>
                 <li><a href="#hizmetler">Hizmetlerimiz</a></li>
-                <li><a href="#galeri">Uygulamalar</a></li>
+                <li><a href="#bolgeler">Bölgelerimiz</a></li>
                 <li><a href="#iletisim">İletişim</a></li>
             </ul>
         </nav>
@@ -439,19 +438,6 @@
             <a href="https://wa.me/905464235361?text=Merhaba,%20ücretsiz%20keşif%20ve%20teklif%20istiyorum." target="_blank" class="btn-gold" style="padding: 15px 35px; font-size: 16px;">
                 <i class="fa-brands fa-whatsapp"></i> Ücretsiz Keşif & Fiyat Al
             </a>
-        </div>
-    </section>
-
-    <!-- HİZMET BÖLGELERİ -->
-    <section id="bolgeler" style="padding-top: 40px; padding-bottom: 40px;">
-        <div class="locations-bar">
-            <h3 style="font-size: 20px; margin-bottom: 8px; color: var(--accent-gold);">Hizmet Verdiğimiz Bölgeler</h3>
-            <div class="locations-grid">
-                <div class="location-badge"><i class="fa-solid fa-location-dot"></i> Bilecik</div>
-                <div class="location-badge"><i class="fa-solid fa-location-dot"></i> Sakarya</div>
-                <div class="location-badge"><i class="fa-solid fa-location-dot"></i> Bursa</div>
-                <div class="location-badge"><i class="fa-solid fa-location-dot"></i> Eskişehir</div>
-            </div>
         </div>
     </section>
 
@@ -508,12 +494,14 @@
         </div>
     </section>
 
-    <!-- HİZMETLERİMİZ -->
+    <!-- HİZMETLERİMİZ & SAHA UYGULAMALARI (BİRLEŞTİRİLMİŞ TEK BÖLÜM) -->
     <section id="hizmetler" style="background-color: #070d1d;">
         <div class="section-title">
-            <p>Neler Yapıyoruz?</p>
-            <h2>Hizmet Detaylarımız</h2>
+            <p>Neler Yapıyoruz & Saha Görsellerimiz</p>
+            <h2>Hizmetlerimiz ve Uygulamalar</h2>
         </div>
+        
+        <!-- Hizmet Kartları -->
         <div class="services-grid">
             <div class="service-card">
                 <i class="fa-solid fa-circle-notch"></i>
@@ -536,14 +524,8 @@
                 <p>Kontrollü beton kırma, moloz tahliyesi ve asfalt/zemin derz genişletme ve hat kesim işçilikleri.</p>
             </div>
         </div>
-    </section>
 
-    <!-- GALERİ / UYGULAMALAR -->
-    <section id="galeri">
-        <div class="section-title">
-            <p>Saha Görsellerimiz</p>
-            <h2>Karot ve Zemin Uygulamaları</h2>
-        </div>
+        <!-- Saha Görselleri / Fotoğraflar -->
         <div class="gallery-grid">
             <div class="gallery-item">
                 <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800" alt="Karot Delik Açma">
@@ -565,6 +547,19 @@
                     <h4 style="color: var(--accent-gold);">Zemin Betonu Dökümü</h4>
                     <p style="font-size: 12px;">Perdahlı & Dayanıklı Saha Betonu</p>
                 </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- HİZMET BÖLGELERİ -->
+    <section id="bolgeler" style="padding-top: 40px; padding-bottom: 40px;">
+        <div class="locations-bar">
+            <h3 style="font-size: 20px; margin-bottom: 8px; color: var(--accent-gold);">Hizmet Verdiğimiz Bölgeler</h3>
+            <div class="locations-grid">
+                <div class="location-badge"><i class="fa-solid fa-location-dot"></i> Bilecik</div>
+                <div class="location-badge"><i class="fa-solid fa-location-dot"></i> Sakarya</div>
+                <div class="location-badge"><i class="fa-solid fa-location-dot"></i> Bursa</div>
+                <div class="location-badge"><i class="fa-solid fa-location-dot"></i> Eskişehir</div>
             </div>
         </div>
     </section>
