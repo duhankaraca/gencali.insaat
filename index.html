@@ -294,9 +294,9 @@
             box-shadow: 0 10px 25px rgba(0,0,0,0.5);
         }
 
-        .reference-video, .reference-img {
+        .reference-video {
             width: 100%;
-            height: 260px;
+            height: 320px;
             object-fit: cover;
             display: block;
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
@@ -408,7 +408,7 @@
                 padding: 15px 5%;
             }
             nav ul {
-                display: none; /* Mobilde sade görünüm için */
+                display: none;
             }
             .hero h1 {
                 font-size: 36px;
@@ -440,6 +440,9 @@
             }
             .btn-gold {
                 width: 100%;
+            }
+            .reference-video {
+                height: 250px;
             }
         }
     </style>
@@ -523,7 +526,7 @@
             </div>
         </div>
 
-        <!-- Saha Görselleri / Fotoğraflar -->
+        <!-- Saha Görselleri -->
         <div class="gallery-grid">
             <div class="gallery-item">
                 <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800" alt="Karot Delik Açma">
@@ -539,7 +542,6 @@
                     <p style="font-size: 12px;">Endüstriyel Tesis Derin Kesim Hizmeti</p>
                 </div>
             </div>
-            <!-- TAM GÖNDERDİĞİNİZ DOSYA İSMİ İLE GÜNCELLENDİ -->
             <div class="gallery-item">
                 <img src="WhatsApp Image 2026-09-27 at 21.00.21.jpeg" alt="Zemin Betonu Dökümü">
                 <div class="gallery-desc">
@@ -557,10 +559,11 @@
             <h2>Referanslarımız</h2>
         </div>
         <div class="references-grid">
-            <!-- Video 1 -->
+            
+            <!-- Video 1: Ağır Blok Beton Kesim & Vinç Tahliyesi (TAM İSMİYLE EKLENDİ) -->
             <div class="reference-card">
-                <video class="reference-video" controls playsinline poster="hero-bg.jpg.jpeg">
-                    <source src="referans-video-1.mp4" type="video/mp4">
+                <video class="reference-video" controls playsinline preload="metadata">
+                    <source src="WhatsApp Video 2026-09-27 at 21.12.15.mp4" type="video/mp4">
                     Tarayıcınız video etiketini desteklemiyor.
                 </video>
                 <div class="reference-info">
@@ -570,31 +573,8 @@
                 </div>
             </div>
 
-            <!-- Video 2 -->
-            <div class="reference-card">
-                <video class="reference-video" controls playsinline poster="hero-bg.jpg.jpeg">
-                    <source src="referans-video-2.mp4" type="video/mp4">
-                    Tarayıcınız video etiketini desteklemiyor.
-                </video>
-                <div class="reference-info">
-                    <h3>Fabrika Saha Betonu & Derz Uygulaması</h3>
-                    <p>Geniş endüstriyel alanlar için hassas terazide dökülen, perdahlanmış ve derz hatları kesilmiş zemin betonu.</p>
-                    <span class="reference-tag"><i class="fa-solid fa-circle-play"></i> Saha Videosu</span>
-                </div>
-            </div>
+            <!-- Diğer videoları gönderdikçe buraya isimleriyle ekleyeceğiz -->
 
-            <!-- Video 3 -->
-            <div class="reference-card">
-                <video class="reference-video" controls playsinline poster="hero-bg.jpg.jpeg">
-                    <source src="referans-video-3.mp4" type="video/mp4">
-                    Tarayıcınız video etiketini desteklemiyor.
-                </video>
-                <div class="reference-info">
-                    <h3>Yüksek Frekanslı Derin Beton Kesim</h3>
-                    <p>Özel ekipman ve hassas raylı sistemler ile bina taşıyıcı elemanlarına zarar vermeden beton parçalama ve kaldırma.</p>
-                    <span class="reference-tag"><i class="fa-solid fa-circle-play"></i> Saha Videosu</span>
-                </div>
-            </div>
         </div>
     </section>
 
