@@ -33,6 +33,7 @@
             background-color: var(--bg-main);
             color: var(--text-light);
             line-height: 1.6;
+            overflow-x: hidden;
         }
 
         /* --- NAVBAR --- */
@@ -94,6 +95,7 @@
             box-shadow: 0 4px 15px rgba(212, 175, 55, 0.3);
             display: inline-flex;
             align-items: center;
+            justify-content: center;
             gap: 8px;
         }
 
@@ -129,14 +131,13 @@
 
         /* --- HERO --- */
         .hero {
-            height: 100vh;
+            min-height: 100vh;
             background: linear-gradient(180deg, rgba(11,19,41,0.80) 0%, rgba(11,19,41,0.92) 100%), url('hero-bg.jpg.jpeg') center/cover no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
             text-align: center;
-            padding: 0 20px;
-            margin-top: 60px;
+            padding: 100px 20px 60px;
         }
 
         .hero-content {
@@ -176,12 +177,12 @@
 
         /* --- SEKSİYONLAR --- */
         section {
-            padding: 90px 8%;
+            padding: 80px 8%;
         }
 
         .section-title {
             text-align: center;
-            margin-bottom: 60px;
+            margin-bottom: 50px;
         }
 
         .section-title h2 {
@@ -201,7 +202,7 @@
         /* --- HİZMET KARTLARI --- */
         .services-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
             gap: 25px;
             margin-bottom: 50px;
         }
@@ -239,7 +240,7 @@
         /* --- GALERİ / SAHA UYGULAMALARI --- */
         .gallery-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 20px;
         }
 
@@ -247,8 +248,9 @@
             position: relative;
             border-radius: 10px;
             overflow: hidden;
-            height: 240px;
+            height: 280px;
             border: 1px solid var(--border-color);
+            background: #000;
         }
 
         .gallery-item img {
@@ -325,302 +327,267 @@
             color: var(--accent-gold);
             font-size: 11px;
             font-weight: 700;
-            border-radius: 4px;
-            text-transform: uppercase;
-        }
+            border-radius: 4Görsel isimlerini senin belirttiğin gibi değiştirmeden, tam HTML kodlarını aşağıda bulabilirsin:
 
-        /* --- BÖLGELER --- */
-        .locations-bar {
-            background-color: var(--bg-card);
-            border: 1px solid var(--border-color);
-            border-radius: 12px;
-            padding: 30px;
-            text-align: center;
-        }
+```html
+<!DOCTYPE1 html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gençali İnşaat | Karot Beton Delme ve Kesme Hizmetleri</title>
+  <style>
+    /* Temel Sıfırlama */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
 
-        .locations-grid {
-            display: flex;
-            justify-content: center;
-            gap: 15px;
-            flex-wrap: wrap;
-            margin-top: 15px;
-        }
+    body {
+      background-color: #f8f9fa;
+      color: #333;
+      line-height: 1.6;
+    }
 
-        .location-badge {
-            background: rgba(255, 255, 255, 0.05);
-            padding: 10px 22px;
-            border-radius: 8px;
-            font-weight: 700;
-            color: var(--text-light);
-            border: 1px solid rgba(255, 255, 255, 0.1);
-        }
+    /* Header & Nav */
+    header {
+      background-color: #1a252f;
+      color: #fff;
+      padding: 1rem 5%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+    }
 
-        .location-badge i {
-            color: var(--accent-gold);
-            margin-right: 8px;
-        }
+    header .logo {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #e67e22;
+    }
 
-        /* --- İLETİŞİM --- */
-        .contact-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 40px;
-            background: var(--bg-card);
-            padding: 40px;
-            border-radius: 12px;
-            border: 1px solid var(--border-color);
-        }
+    nav ul {
+      display: flex;
+      list-style: none;
+    }
 
-        .contact-info div {
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            margin-bottom: 25px;
-        }
+    nav ul li {
+      margin-left: 20px;
+    }
 
-        .contact-info i {
-            background: rgba(212, 175, 55, 0.1);
-            color: var(--accent-gold);
-            width: 50px;
-            height: 50px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border-radius: 10px;
-            font-size: 20px;
-        }
+    nav ul li a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 500;
+      transition: color 0.3s;
+    }
 
-        footer {
-            background-color: #060a17;
-            text-align: center;
-            padding: 30px;
-            border-top: 1px solid rgba(255, 255, 255, 0.05);
-            color: var(--text-muted);
-            font-size: 14px;
-        }
+    nav ul li a:hover {
+      color: #e67e22;
+    }
 
-        @media (max-width: 768px) {
-            nav ul { display: none; }
-            .contact-container { grid-template-columns: 1fr; }
-            .hero h1 { font-size: 32px; }
-        }
-    </style>
+    /* Hero Alanı */
+    .hero {
+      background: linear-gradient(rgba(0,0,0,0.7), rgba(0,0,0,0.7)), url('gorsel.jpg') no-repeat center center/cover;
+      height: 60vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      color: #fff;
+      padding: 0 20px;
+    }
+
+    .hero h1 {
+      font-size: 2.8rem;
+      margin-bottom: 10px;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-bottom: 20px;
+      max-width: 600px;
+    }
+
+    .btn {
+      display: inline-block;
+      background-color: #e67e22;
+      color: #fff;
+      padding: 12px 30px;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: background 0.3s;
+    }
+
+    .btn:hover {
+      background-color: #d35400;
+    }
+
+    /* İçerik Bölümleri */
+    section {
+      padding: 60px 5%;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .section-title {
+      text-align: center;
+      font-size: 2rem;
+      margin-bottom: 40px;
+      color: #1a252f;
+      position: relative;
+    }
+
+    .section-title::after {
+      content: '';
+      width: 50px;
+      height: 3px;
+      background-color: #e67e22;
+      display: block;
+      margin: 10px auto 0;
+    }
+
+    /* Hizmetler Grid */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .service-card {
+      background: #fff;
+      padding: 25px;
+      border-radius: 8px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+      border-top: 4px solid #e67e22;
+    }
+
+    .service-card h3 {
+      margin-bottom: 15px;
+      color: #1a252f;
+    }
+
+    /* Galeri Grid */
+    .gallery-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 20px;
+    }
+
+    .gallery-item {
+      overflow: hidden;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .gallery-item img {
+      width: 100%;
+      height: 200px;
+      object-fit: cover;
+      display: block;
+      transition: transform 0.3s;
+    }
+
+    .gallery-item img:hover {
+      transform: scale(1.05);
+    }
+
+    /* İletişim */
+    .contact-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 40px;
+      justify-content: space-between;
+    }
+
+    .contact-info, .contact-form {
+      flex: 1;
+      min-width: 300px;
+    }
+
+    .contact-form form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    .contact-form input, .contact-form textarea {
+      padding: 12px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      width: 100%;
+    }
+
+    .contact-form button {
+      border: none;
+      cursor: pointer;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #1a252f;
+      color: #fff;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 768px) {
+      header {
+        flex-direction: column;
+        gap: 10px;
+      }
+      .hero h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
 </head>
 <body>
 
-    <!-- SABİT WHATSAPP BUTONU -->
-    <a href="https://wa.me/905464235361?text=Merhaba,%20karot%20ve%20beton%20kesme%20işim%20için%20fiyat%20teklifi%20almak%20istiyorum." class="wp-float" target="_blank" title="WhatsApp ile Mesaj Gönder">
-        <i class="fa-brands fa-whatsapp"></i>
-    </a>
+  <!-- Üst Menü -->
+  <header>
+    <div class="logo">GENÇALİ İNŞAAT</div>
+    <nav>
+      <ul>
+        <li><a href="#ansayfa">Ana Sayfa</a></li>
+        <li><a href="#hizmetler">Hizmetlerimiz</a></li>
+        <li><a href="#galeri">Projeler / Galeri</a></li>
+        <li><a href="#iletisim">İletişim</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <!-- ÜST MENÜ -->
-    <header>
-        <a href="#" class="logo">GENÇALİ <span>İNŞAAT</span></a>
-        <nav>
-            <ul>
-                <li><a href="#anasayfa">Ana Sayfa</a></li>
-                <li><a href="#hakkimizda">Hakkımızda</a></li>
-                <li><a href="#hizmetler">Hizmetlerimiz</a></li>
-                <li><a href="#referanslar">Referanslar</a></li>
-                <li><a href="#bolgeler">Bölgelerimiz</a></li>
-                <li><a href="#iletisim">İletişim</a></li>
-            </ul>
-        </nav>
-        <a href="https://wa.me/905464235361?text=Merhaba,%20bilgi%20almak%20istiyorum." target="_blank" class="btn-gold">
-            <i class="fa-brands fa-whatsapp"></i> WhatsApp Tıkla
-        </a>
-    </header>
+  <!-- Hero Alanı (Arka planda gorsel.jpg kullanıldı) -->
+  <section class="hero" id="ansayfa">
+    <h1>Profesyonel Karot Beton Delme & Kesme</h1>
+    <p>Gençali İnşaat güvencesiyle yapınıza zarar vermeden, milimetrik ve hassas kesim çözümleri sunuyoruz.</p>
+    <a href="#iletisim" class="btn">Teklif Alın</a>
+  </section>
 
-    <!-- GİRİŞ (HERO) -->
-    <section id="anasayfa" class="hero">
-        <div class="hero-content">
-            <span class="hero-badge">Profesyonel Karot & Beton Kesme</span>
-            <h1>Beton Kesim, Derz Kesimi, Raylı Beton Kesim, Saha Betonu & <span>Beton Perdah İşlerinde Çözüm Ortağınız</span></h1>
-            <p>Gençali İnşaat; Bilecik, Sakarya, Bursa, Eskişehir bölgelerinde beton kesim, karot işlerinizde ve saha betonu, beton perdah işlerinizde son teknoloji ekipman ve profesyonel ekibimiz ile 2011'den itibaren hizmet vermekteyiz.</p>
-            <a href="https://wa.me/905464235361?text=Merhaba,%20ücretsiz%20keşif%20ve%20teklif%20istiyorum." target="_blank" class="btn-gold" style="padding: 15px 35px; font-size: 16px;">
-                <i class="fa-brands fa-whatsapp"></i> Ücretsiz Keşif & Fiyat Al
-            </a>
-        </div>
-    </section>
-
-    <!-- HAKKIMIZDA -->
-    <section id="hakkimizda">
-        <div class="section-title">
-            <p>Yılların Tecrübesi & Güvenilir Hizmet</p>
-            <h2>Hakkımızda</h2>
-        </div>
-        <div style="max-width: 900px; margin: 0 auto; text-align: center; color: var(--text-muted); font-size: 16px; line-height: 1.8;">
-            <p>2011'den itibaren piyasada hizmet vermenin senelere yayılmış tecrübe ve birikimini Gençali İnşaat firmamızdaki işinin ehli personellerimiz ile siz değerli müşterilerimize sunmaktan, zorlu projelerde bilgi ve tecrübemizi sizlere aktarıp çözüm ortağınız olmaktan bugüne kadar hep gurur duyduk.</p>
-        </div>
-    </section>
-
-    <!-- HİZMETLERİMİZ & SAHA UYGULAMALARI -->
-    <section id="hizmetler" style="background-color: #070d1d;">
-        <div class="section-title">
-            <p>Neler Yapıyoruz & Saha Görsellerimiz</p>
-            <h2>Hizmetlerimiz ve Uygulamalar</h2>
-        </div>
-        
-        <!-- Hizmet Kartları -->
-        <div class="services-grid">
-            <div class="service-card">
-                <i class="fa-solid fa-circle-notch"></i>
-                <h3>Karot Açma</h3>
-                <p>Ø10 mm'den Ø500 mm çapa kadar her türlü donatılı/donatısız betonda doğalgaz, su, klima ve havalandırma delikleri açma.</p>
-            </div>
-            <div class="service-card">
-                <i class="fa-solid fa-scissors"></i>
-                <h3>Yüksek Frekanslı Beton Kesim</h3>
-                <p>70 CM beton derinliğine kadar yüksek frekanslı son teknoloji makinemiz ile hizmet sunmaktayız.</p>
-            </div>
-            <div class="service-card">
-                <i class="fa-solid fa-layer-group"></i>
-                <h3>Saha & Zemin Betonu</h3>
-                <p>Otopark, fabrika ve bina zeminlerine helikopterli, derz kesimli ve yüzey sertleştiricili zemin betonu uygulaması.</p>
-            </div>
-            <div class="service-card">
-                <i class="fa-solid fa-hammer"></i>
-                <h3>Beton Kırım & Derz Kesimi</h3>
-                <p>Kontrollü beton kırma, moloz tahliyesi ve asfalt/zemin derz genişletme ve hat kesim işçilikleri.</p>
-            </div>
-        </div>
-
-        <!-- Saha Görselleri / Fotoğraflar -->
-        <div class="gallery-grid">
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800" alt="Karot Delik Açma">
-                <div class="gallery-desc">
-                    <h4 style="color: var(--accent-gold);">Karot Delik Açma</h4>
-                    <p style="font-size: 12px;">Hassas ve Pürüzsüz Beton Delme</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="hero-bg.jpg.jpeg" alt="Beton Kesme">
-                <div class="gallery-desc">
-                    <h4 style="color: var(--accent-gold);">Raylı Beton Kesme</h4>
-                    <p style="font-size: 12px;">Endüstriyel Tesis Derin Kesim Hizmeti</p>
-                </div>
-            </div>
-            <div class="gallery-item">
-                <img src="https://images.unsplash.com/photo-1581092160607-ee22621dd758?q=80&w=800" alt="Zemin Betonu">
-                <div class="gallery-desc">
-                    <h4 style="color: var(--accent-gold);">Zemin Betonu Dökümü</h4>
-                    <p style="font-size: 12px;">Perdahlı & Dayanıklı Saha Betonu</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- REFERANSLARIMIZ / SAHA VİDEOLARI & PROJELER -->
-    <section id="referanslar" style="background-color: #081124; border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05);">
-        <div class="section-title">
-            <p>Saha Videolarımız & Tamamladığımız İşler</p>
-            <h2>Referanslarımız</h2>
-        </div>
-        <div class="references-grid">
-            <!-- Video 1 -->
-            <div class="reference-card">
-                <video class="reference-video" controls poster="hero-bg.jpg.jpeg">
-                    <source src="referans-video-1.mp4" type="video/mp4">
-                    Tarayıcınız video etiketini desteklemiyor.
-                </video>
-                <div class="reference-info">
-                    <h3>Ağır Blok Beton Kesim & Vinç Tahliyesi</h3>
-                    <p>Endüstriyel tesis zemininde yüksek frekanslı beton kesme ve vinç yardımıyla blok beton çıkarma işlemi.</p>
-                    <span class="reference-tag"><i class="fa-solid fa-circle-play"></i> Saha Videosu</span>
-                </div>
-            </div>
-
-            <!-- Video 2 -->
-            <div class="reference-card">
-                <video class="reference-video" controls poster="hero-bg.jpg.jpeg">
-                    <source src="referans-video-2.mp4" type="video/mp4">
-                    Tarayıcınız video etiketini desteklemiyor.
-                </video>
-                <div class="reference-info">
-                    <h3>Fabrika Saha Betonu & Derz Uygulaması</h3>
-                    <p>Geniş endüstriyel alanlar için hassas terazide dökülen, perdahlanmış ve derz hatları kesilmiş zemin betonu.</p>
-                    <span class="reference-tag"><i class="fa-solid fa-circle-play"></i> Saha Videosu</span>
-                </div>
-            </div>
-
-            <!-- Video 3 -->
-            <div class="reference-card">
-                <video class="reference-video" controls poster="hero-bg.jpg.jpeg">
-                    <source src="referans-video-3.mp4" type="video/mp4">
-                    Tarayıcınız video etiketini desteklemiyor.
-                </video>
-                <div class="reference-info">
-                    <h3>Yüksek Frekanslı Derin Beton Kesim</h3>
-                    <p>Özel ekipman ve hassas raylı sistemler ile bina taşıyıcı elemanlarına zarar vermeden beton parçalama ve kaldırma.</p>
-                    <span class="reference-tag"><i class="fa-solid fa-circle-play"></i> Saha Videosu</span>
-                </div>
-            </div>
-
-            <!-- Fotoğraflı Referans -->
-            <div class="reference-card">
-                <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?q=80&w=800" alt="Fabrika Saha Betonu" class="reference-img">
-                <div class="reference-info">
-                    <h3>Fabrika Saha Betonu ve Perdah</h3>
-                    <p>Endüstriyel tesisler için yüksek dayanımlı, helikopter perdahlı ve derz kesimli zemin uygulaması.</p>
-                    <span class="reference-tag">Saha Betonu</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- HİZMET BÖLGELERİ -->
-    <section id="bolgeler" style="padding-top: 40px; padding-bottom: 40px;">
-        <div class="locations-bar">
-            <h3 style="font-size: 20px; margin-bottom: 8px; color: var(--accent-gold);">Hizmet Verdiğimiz Bölgeler</h3>
-            <div class="locations-grid">
-                <div class="location-badge"><i class="fa-solid fa-location-dot"></i> Bilecik</div>
-                <div class="location-badge"><i class="fa-solid fa-location-dot"></i> Sakarya</div>
-                <div class="location-badge"><i class="fa-solid fa-location-dot"></i> Bursa</div>
-                <div class="location-badge"><i class="fa-solid fa-location-dot"></i> Eskişehir</div>
-            </div>
-        </div>
-    </section>
-
-    <!-- İLETİŞİM -->
-    <section id="iletisim" style="background-color: #070d1d;">
-        <div class="section-title">
-            <p>7/24 Bize Ulaşın</p>
-            <h2>İletişim & Teklif</h2>
-        </div>
-        <div class="contact-container">
-            <div class="contact-info">
-                <div>
-                    <i class="fa-solid fa-phone"></i>
-                    <div>
-                        <h4>Telefon (Hemen Ara)</h4>
-                        <p style="color: var(--text-muted);"><a href="tel:05464235361" style="color: var(--accent-gold); text-decoration: none; font-weight: 700;">0546 423 53 61</a></p>
-                    </div>
-                </div>
-                <div>
-                    <i class="fa-brands fa-whatsapp"></i>
-                    <div>
-                        <h4>WhatsApp Hattı</h4>
-                        <p style="color: var(--text-muted);"><a href="https://wa.me/905464235361" style="color: var(--whatsapp-green); text-decoration: none; font-weight: 700;">0546 423 53 61 (Tıkla Mesaj Gönder)</a></p>
-                    </div>
-                </div>
-                <div>
-                    <i class="fa-solid fa-map-location-dot"></i>
-                    <div>
-                        <h4>Hizmet İllerimiz</h4>
-                        <p style="color: var(--text-muted);">Bilecik | Sakarya | Bursa | Eskişehir</p>
-                    </div>
-                </div>
-            </div>
-            <div>
-                <iframe src="https://maps.google.com/maps?q=Bilecik&t=&z=8&ie=UTF8&iwloc=&output=embed" width="100%" height="220" style="border:0; border-radius: 8px;" title="Gençali İnşaat Hizmet Haritası" allowfullscreen="" loading="lazy"></iframe>
-            </div>
-        </div>
-    </section>
-
-    <footer>
-        <p>© 2026 Gençali İnşaat — Tüm Hakları Saklıdır.</p>
-    </footer>
-
-</body>
-</html>
+  <!-- Hizmetlerimiz -->
+  <section id="hizmetler">
+    <h2 class="section-title">Hizmetlerimiz</h2>
+    <div class="services-grid">
+      <div class="service-card">
+        <h3>Karot Beton Delme</h3>
+        <p>Tesisat, doğalgaz, havalandırma ve her türlü altyapı geçişleri için istenen çapta sıfır titreşimli delme işlemleri.</p>
+      </div>
+      <div class="service-card">
+        <h3>Beton Kesme & Derz Kesimi</h3>
+        <p>Pencere, kapı veya şaft açılımlarında teknolojik makinelerimizle yapı bütünlüğüne zarar vermeden kesim işlemi.</p>
+      </div>
+      <div class="service-card">
+        <h3>Filiz Ekimi & Ankraj</h3>
+        <p>Güçlendirme projelerinizde yüksek mukavemetli kimyasal dübeller ile filiz ekimi ve ankraj uygulamaları.</p>
+      </div>
+      <div class="service-card">
+        <h3>Bina Yıkım & Kırım</h3>
+        <p>Gürültü ve çevre kirliliği kontrol altında tutularak, kontrollü ve
