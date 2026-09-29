@@ -292,11 +292,13 @@
             box-shadow: 0 10px 25px rgba(0,0,0,0.5);
         }
 
-        .reference-img {
+        .reference-video, .reference-img {
             width: 100%;
-            height: 200px;
+            height: 260px;
             object-fit: cover;
+            display: block;
             border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+            background: #000;
         }
 
         .reference-info {
@@ -509,43 +511,59 @@
         </div>
     </section>
 
-    <!-- REFERANSLARIMIZ / PROJELER -->
+    <!-- REFERANSLARIMIZ / SAHA VİDEOLARI & PROJELER -->
     <section id="referanslar" style="background-color: #081124; border-top: 1px solid rgba(255,255,255,0.05); border-bottom: 1px solid rgba(255,255,255,0.05);">
         <div class="section-title">
-            <p>Tamamladığımız İşler & Projeler</p>
+            <p>Saha Videolarımız & Tamamladığımız İşler</p>
             <h2>Referanslarımız</h2>
         </div>
         <div class="references-grid">
+            <!-- Video 1 -->
+            <div class="reference-card">
+                <video class="reference-video" controls poster="hero-bg.jpg.jpeg">
+                    <source src="referans-video-1.mp4" type="video/mp4">
+                    Tarayıcınız video etiketini desteklemiyor.
+                </video>
+                <div class="reference-info">
+                    <h3>Ağır Blok Beton Kesim & Vinç Tahliyesi</h3>
+                    <p>Endüstriyel tesis zemininde yüksek frekanslı beton kesme ve vinç yardımıyla blok beton çıkarma işlemi.</p>
+                    <span class="reference-tag"><i class="fa-solid fa-circle-play"></i> Saha Videosu</span>
+                </div>
+            </div>
+
+            <!-- Video 2 -->
+            <div class="reference-card">
+                <video class="reference-video" controls poster="hero-bg.jpg.jpeg">
+                    <source src="referans-video-2.mp4" type="video/mp4">
+                    Tarayıcınız video etiketini desteklemiyor.
+                </video>
+                <div class="reference-info">
+                    <h3>Fabrika Saha Betonu & Derz Uygulaması</h3>
+                    <p>Geniş endüstriyel alanlar için hassas terazide dökülen, perdahlanmış ve derz hatları kesilmiş zemin betonu.</p>
+                    <span class="reference-tag"><i class="fa-solid fa-circle-play"></i> Saha Videosu</span>
+                </div>
+            </div>
+
+            <!-- Video 3 -->
+            <div class="reference-card">
+                <video class="reference-video" controls poster="hero-bg.jpg.jpeg">
+                    <source src="referans-video-3.mp4" type="video/mp4">
+                    Tarayıcınız video etiketini desteklemiyor.
+                </video>
+                <div class="reference-info">
+                    <h3>Yüksek Frekanslı Derin Beton Kesim</h3>
+                    <p>Özel ekipman ve hassas raylı sistemler ile bina taşıyıcı elemanlarına zarar vermeden beton parçalama ve kaldırma.</p>
+                    <span class="reference-tag"><i class="fa-solid fa-circle-play"></i> Saha Videosu</span>
+                </div>
+            </div>
+
+            <!-- Fotoğraflı Referans -->
             <div class="reference-card">
                 <img src="https://images.unsplash.com/photo-1541888946425-d0fbb186a5b3?q=80&w=800" alt="Fabrika Saha Betonu" class="reference-img">
                 <div class="reference-info">
                     <h3>Fabrika Saha Betonu ve Perdah</h3>
                     <p>Endüstriyel tesisler için yüksek dayanımlı, helikopter perdahlı ve derz kesimli zemin uygulaması.</p>
                     <span class="reference-tag">Saha Betonu</span>
-                </div>
-            </div>
-            <div class="reference-card">
-                <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?q=80&w=800" alt="Karot Delme Projesi" class="reference-img">
-                <div class="reference-info">
-                    <h3>Endüstriyel Tesis Karot Uygulaması</h3>
-                    <p>Tesis havalandırma ve altyapı geçişleri için hassas çaplarda donatılı beton delme işlemleri.</p>
-                    <span class="reference-tag">Karot Delme</span>
-                </div>
-            </div>
-            <div class="reference-card">
-                <img src="hero-bg.jpg.jpeg" alt="Raylı Kesim Projesi" class="reference-img">
-                <div class="reference-info">
-                    <h3>Raylı Testere ile Beton Kesim</h3>
-                    <p>Taşıyıcı kolon ve perdelerde yapının bütünlüğünü bozmadan hidrolik sistemler ile sessiz ve hassas kesim.</p>
-                    <span class="reference-tag">Beton Kesme</span>
-                </div>
-            </div>
-            <div class="reference-card">
-                <img src="https://images.unsplash.com/photo-1572981779307-38b8cabb2407?q=80&w=800" alt="Otopark Zemin Betonu" class="reference-img">
-                <div class="reference-info">
-                    <h3>Kapalı Otopark Zemin Kaplama</h3>
-                    <p>Yüzey sertleştiricili, aşınmaya dayanıklı ve derz açımlı kapalı otopark beton uygulaması.</p>
-                    <span class="reference-tag">Zemin Betonu</span>
                 </div>
             </div>
         </div>
