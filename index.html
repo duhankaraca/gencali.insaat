@@ -132,7 +132,7 @@
         /* --- HERO --- */
         .hero {
             min-height: 100vh;
-            background: linear-gradient(180deg, rgba(11,19,41,0.80) 0%, rgba(11,19,41,0.92) 100%), url('hero-bg.jpg.jpeg') center/cover no-repeat;
+            background: linear-gradient(180deg, rgba(11,19,41,0.80) 0%, rgba(11,19,41,0.92) 100%), url('WhatsApp%20Image%202026-09-27%20at%2021.00.21.jpeg') center/cover no-repeat;
             display: flex;
             align-items: center;
             justify-content: center;
@@ -248,9 +248,12 @@
             position: relative;
             border-radius: 10px;
             overflow: hidden;
-            height: 280px;
+            height: 380px;
             border: 1px solid var(--border-color);
             background: #000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
         }
 
         .gallery-item img {
@@ -271,13 +274,15 @@
             right: 0;
             background: linear-gradient(transparent, rgba(11, 19, 41, 0.95));
             padding: 15px;
+            z-index: 2;
         }
 
-        /* --- REFERANSLAR & VİDEOLAR --- */
+        /* --- REFERANSLAR --- */
         .references-grid {
             display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
             gap: 25px;
+            align-items: start;
         }
 
         .reference-card {
@@ -296,7 +301,6 @@
             box-shadow: 0 10px 25px rgba(0,0,0,0.5);
         }
 
-        /* Mobil & Masaüstü Uyumlu Esnek Video Kapsayıcısı */
         .video-wrapper {
             position: relative;
             width: 100%;
@@ -304,23 +308,20 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            /* Tüm cihazlarda düzgün ölçeklenme için */
-            aspect-ratio: 16 / 9; 
         }
 
         .reference-video {
             width: 100%;
-            height: 100%;
-            object-fit: contain; /* Videonun orijinal oranını koruyarak kesilmesini engeller */
+            max-height: 70vh;
+            aspect-ratio: 9 / 16;
+            object-fit: contain;
+            display: block;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.05);
             background: #000;
         }
 
         .reference-info {
             padding: 20px;
-            flex-grow: 1;
-            display: flex;
-            flex-direction: column;
-            justify-content: space-between;
         }
 
         .reference-info h3 {
@@ -345,7 +346,6 @@
             font-weight: 700;
             border-radius: 4px;
             text-transform: uppercase;
-            align-self: flex-start;
         }
 
         /* --- BÖLGELER --- */
@@ -419,7 +419,6 @@
             font-size: 14px;
         }
 
-        /* --- MOBİL, TABLET & LAPTOP UYUMU (RESPONSIVE) --- */
         @media (max-width: 992px) {
             header {
                 padding: 15px 5%;
@@ -458,9 +457,8 @@
             .btn-gold {
                 width: 100%;
             }
-            .video-wrapper {
-                aspect-ratio: 9 / 16; /* Dikey çekilen videolar mobilde tam ekran dikey durması için */
-                max-height: 450px;
+            .reference-video {
+                max-height: 60vh;
             }
         }
     </style>
@@ -520,7 +518,6 @@
             <h2>Hizmetlerimiz ve Uygulamalar</h2>
         </div>
         
-        <!-- Hizmet Kartları -->
         <div class="services-grid">
             <div class="service-card">
                 <i class="fa-solid fa-circle-notch"></i>
@@ -534,7 +531,7 @@
             </div>
             <div class="service-card">
                 <i class="fa-solid fa-layer-group"></i>
-                <h3>Saha Betonu & Zemin Betonu</h3>
+                <h3>Saha & Zemin Betonu</h3>
                 <p>Otopark, fabrika ve bina zeminlerine helikopterli, derz kesimli ve yüzey sertleştiricili zemin betonu uygulaması.</p>
             </div>
             <div class="service-card">
@@ -554,25 +551,17 @@
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="hero-bg.jpg.jpeg" alt="Raylı Beton Kesme">
+                <img src="WhatsApp%20Image%202026-09-27%20at%2021.00.21.jpeg" alt="Zemin Betonu Dökümü">
                 <div class="gallery-desc">
-                    <h4 style="color: var(--accent-gold);">Raylı Beton Kesme</h4>
-                    <p style="font-size: 12px;">Endüstriyel Tesis Derin Kesim Hizmeti</p>
+                    <h4 style="color: var(--accent-gold);">Saha Betonu Zemin Betonu Dökümü</h4>
+                    <p style="font-size: 12px;">Perdahlı & Dayanıklı Endüstriyel Saha Betonu</p>
                 </div>
             </div>
             <div class="gallery-item">
-                <img src="WhatsApp Image 2026-09-27 at 21.00.21.jpeg" alt="Zemin Betonu Dökümü">
+                <img src="WhatsApp%20Image%202026-09-29%20at%2015.46.37.jpeg" alt="Zemin Betonu Hazırlık">
                 <div class="gallery-desc">
-                    <h4 style="color: var(--accent-gold);">Zemin Betonu Dökümü</h4>
-                    <p style="font-size: 12px;">Perdahlı & Dayanıklı Saha Betonu</p>
-                </div>
-            </div>
-            <!-- 3. MEDYA (GÖRSEL OLAN) BURAYA EKLENDİ -->
-            <div class="gallery-item">
-                <img src="WhatsApp Image 2026-09-27 at 21.08.30.jpeg" alt="Saha Betonu Dökümü & Temel Uygulaması">
-                <div class="gallery-desc">
-                    <h4 style="color: var(--accent-gold);">Saha Betonu Dökümü & Temel Uygulaması</h4>
-                    <p style="font-size: 12px;">Geniş Alan Saha & Donatılı Zemin Betonu</p>
+                    <h4 style="color: var(--accent-gold);">Zemin Betonu Saha Çalışması</h4>
+                    <p style="font-size: 12px;">Kalıp İçi Beton Serim ve Düzleme</p>
                 </div>
             </div>
         </div>
@@ -586,11 +575,38 @@
         </div>
         <div class="references-grid">
             
-            <!-- Video 1 -->
             <div class="reference-card">
                 <div class="video-wrapper">
                     <video class="reference-video" controls playsinline preload="metadata">
-                        <source src="WhatsApp Video 2026-09-27 at 21.12.15.mp4" type="video/mp4">
+                        <source src="WhatsApp%20Video%202026-09-27%20at%2021.08.14.mp4" type="video/mp4">
+                        Tarayıcınız video etiketini desteklemiyor.
+                    </video>
+                </div>
+                <div class="reference-info">
+                    <h3>Saha Betonu Zemin Betonu Dökümü</h3>
+                    <p>Pompa ve mikser ile geniş alan zemin betonu serimi ve hazırlık çalışmaları.</p>
+                    <span class="reference-tag"><i class="fa-solid fa-circle-play"></i> Saha Videosu</span>
+                </div>
+            </div>
+
+            <div class="reference-card">
+                <div class="video-wrapper">
+                    <video class="reference-video" controls playsinline preload="metadata">
+                        <source src="WhatsApp%20Video%202026-09-27%20at%2021.08.14%20(1).mp4" type="video/mp4">
+                        Tarayıcınız video etiketini desteklemiyor.
+                    </video>
+                </div>
+                <div class="reference-info">
+                    <h3>Çiftli Binicili Helikopter Perdah Makinesi</h3>
+                    <p>Endüstriyel zemin betonu düzleme ve yüzey perdahı uygulaması.</p>
+                    <span class="reference-tag"><i class="fa-solid fa-circle-play"></i> Saha Videosu</span>
+                </div>
+            </div>
+
+            <div class="reference-card">
+                <div class="video-wrapper">
+                    <video class="reference-video" controls playsinline preload="metadata">
+                        <source src="WhatsApp%20Video%202026-09-27%20at%2021.12.15.mp4" type="video/mp4">
                         Tarayıcınız video etiketini desteklemiyor.
                     </video>
                 </div>
@@ -601,62 +617,72 @@
                 </div>
             </div>
 
-            <!-- Video 2 (1. Medya Video) -->
             <div class="reference-card">
                 <div class="video-wrapper">
                     <video class="reference-video" controls playsinline preload="metadata">
-                        <source src="WhatsApp Video 2026-09-27 at 20.57.17.mp4" type="video/mp4">
+                        <source src="WhatsApp%20Video%202026-09-27%20at%2021.12.18.mp4" type="video/mp4">
                         Tarayıcınız video etiketini desteklemiyor.
                     </video>
                 </div>
                 <div class="reference-info">
-                    <h3>Saha Betonu & Zemin Betonu Dökümü</h3>
-                    <p>Pompalı beton aracı ve saha ekibimiz ile geniş alan donatılı zemin betonu dökümü uygulaması.</p>
+                    <h3>Tamamlanan Zemin Betonu & Derz Kesimi</h3>
+                    <p>Kapalı tesis zemininde perdahlanmış ve derz kesimi tamamlanmış teslim edilen saha betonu.</p>
                     <span class="reference-tag"><i class="fa-solid fa-circle-play"></i> Saha Videosu</span>
                 </div>
             </div>
 
-            <!-- Video 3 (2. Medya Video - Helikopter Makinesi) -->
             <div class="reference-card">
                 <div class="video-wrapper">
                     <video class="reference-video" controls playsinline preload="metadata">
-                        <source src="WhatsApp Video 2026-09-27 at 21.05.02.mp4" type="video/mp4">
+                        <source src="WhatsApp%20Video%202026-09-29%20at%2015.40.33.mp4" type="video/mp4">
                         Tarayıcınız video etiketini desteklemiyor.
                     </video>
                 </div>
                 <div class="reference-info">
-                    <h3>Çiftli Helikopterli Perdah Makinesi Uygulaması</h3>
-                    <p>Binilmeli çiftli helikopter makinesi ile zemin betonu yüzey perdahlama ve düzleştirme işlemi.</p>
+                    <h3>Saha Betonu Döküm Ve Uygulaması</h3>
+                    <p>Fabrika ve depo alanlarında zemin betonu dökümü ve kalıp içi beton serimi.</p>
                     <span class="reference-tag"><i class="fa-solid fa-circle-play"></i> Saha Videosu</span>
                 </div>
             </div>
 
-            <!-- Video 4 (4. Medya Video) -->
             <div class="reference-card">
                 <div class="video-wrapper">
                     <video class="reference-video" controls playsinline preload="metadata">
-                        <source src="WhatsApp Video 2026-09-27 at 21.09.28.mp4" type="video/mp4">
+                        <source src="WhatsApp%20Video%202026-09-29%20at%2015.46.38.mp4" type="video/mp4">
                         Tarayıcınız video etiketini desteklemiyor.
                     </video>
                 </div>
                 <div class="reference-info">
-                    <h3>Bina Yanı Zemin Betonu & Pompalı Döküm</h3>
-                    <p>Endüstriyel yapı çevresinde beton mikseri ve pompa yardımıyla zemin betonu döküm çalışmamız.</p>
+                    <h3>Perdahlı Saha Betonu İşçiliği</h3>
+                    <p>Endüstriyel zemin düzleme ve yüzey sertleştiricili perdah uygulaması.</p>
                     <span class="reference-tag"><i class="fa-solid fa-circle-play"></i> Saha Videosu</span>
                 </div>
             </div>
 
-            <!-- Son Video (Eklemiş olduğumuz 5. Video) -->
             <div class="reference-card">
                 <div class="video-wrapper">
                     <video class="reference-video" controls playsinline preload="metadata">
-                        <source src="WhatsApp Video 2026-09-27 at 21.11.13.mp4" type="video/mp4">
+                        <source src="WhatsApp%20Video%202026-09-29%20at%2015.46.45.mp4" type="video/mp4">
                         Tarayıcınız video etiketini desteklemiyor.
                     </video>
                 </div>
                 <div class="reference-info">
-                    <h3>Fabrika İçi Derz Kesimi & Saha Betonu Tamamlanması</h3>
-                    <p>Fabrika ve depo alanlarında derz kesim hatları çekilmiş, pürüzsüz perdahlı zemin betonu teslimatı.</p>
+                    <h3>Derz Kesim Ve Zemin Derz Açma</h3>
+                    <p>Beton zemin genleşme derzlerinin hassas bıçaklı makinelerle kesilmesi.</p>
+                    <span class="reference-tag"><i class="fa-solid fa-circle-play"></i> Saha Videosu</span>
+                </div>
+            </div>
+
+            <div class="reference-card">
+                <div class="video-wrapper">
+                    <video class="reference-video" controls playsinline preload="metadata">
+                        <source src="WhatsApp%20Video%202026-09-29%20at%2015.59.21.mp4" type="video/mp4">
+                        Tarayıcınız video etiketini desteklemiyor.
+                    </video>
+                </div>
+                <div class="reference-info">
+                    <h3>Zemin Betonu Düzeltme İşlemleri</h3>
+                    <p>Taze beton yüzeyinin mastarlanması ve düzeltme aşaması.</p>
                     <span class="reference-tag"><i class="fa-solid fa-circle-play"></i> Saha Videosu</span>
                 </div>
             </div>
